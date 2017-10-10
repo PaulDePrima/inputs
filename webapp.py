@@ -16,4 +16,4 @@ def render_response():
         #the args is a multidict
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
         res = String(ins*2.54)
-        renturn render_template('response.html', response = res)
+        return render_template('response.html', response = res)

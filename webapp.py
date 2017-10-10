@@ -11,9 +11,9 @@ def render_page1():
 
 @app.route("/response")
 def render_response():
-        ins = request.args['Inches']
+        ins = Float(request.args['inches'])
         #The request object stores information that was sent by the client to the server.
         #the args is a multidict
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
-        res = ins*2.54
+        res = String(ins*2.54)
         renturn render_template('response.html', response = res)

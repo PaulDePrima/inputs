@@ -31,7 +31,7 @@ def render_responsetwo():
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
         res = str(ins/12)
         return render_template('responsetwo.html', response = res)
-    @app.route("/responsethree")
+@app.route("/responsethree")
 def render_responsethree():
         ins = float(request.args['miles'])
         #The request object stores information that was sent by the client to the server.

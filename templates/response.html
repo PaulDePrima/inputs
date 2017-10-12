@@ -1,15 +1,15 @@
 {% extends "layout.html" %}
 {% set active_page ="fir" %}
-{% block title %}Inches to Centimeters!{% endblock %}
+{% block title %} Fahrenheit to Celsius{% endblock %}
 {% block content %}
 
 <form action='/response'>
-      <br>Convert to cm!</br>
+      <br>Convert to celsius</br>
       <input type="text" name="inches">
       <br><br>
       <input type="submit">
     </form>
 
-<h1>{{ their }} inches in centimeters is: {{ response }}</h1>
+<h1>{{ their }} fahrenheit in celsius is: {{ response }}</h1>
 
 {% endblock %}

@@ -38,4 +38,4 @@ def render_responsethree():
         #the args is a multidict
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
         res = str(ins*63360)
-        return render_template('responsethree.html', their = request.args['inches'], response = res)
+        return render_template('responsethree.html', their = request.args['miles'], response = res)

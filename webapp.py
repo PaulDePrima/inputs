@@ -22,7 +22,6 @@ def render_response():
         #the args is a multidict
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
         res = str(ins*2.54)
-        ores = str(ins)
         return render_template('response.html', their = request.args['inches'], response = res)
 @app.route("/responsetwo")
 def render_responsetwo():
@@ -31,7 +30,7 @@ def render_responsetwo():
         #the args is a multidict
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
         res = str(ins/12)
-        return render_template('responsetwo.html', response = res)
+        return render_template('responsetwo.html', their = request.args['inches'], response = res)
 @app.route("/responsethree")
 def render_responsethree():
         ins = float(request.args['miles'])
@@ -39,4 +38,4 @@ def render_responsethree():
         #the args is a multidict
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
         res = str(ins*63360)
-        return render_template('responsethree.html', response = res)
+        return render_template('responsethree.html', their = request.args['inches'], response = res)

@@ -22,7 +22,8 @@ def render_response():
         #the args is a multidict
         #the way we get info from args is that it is visible in a url. - the information in args is visible in the url for hte page being requested(ex. .../response?color=blue)
         res = str(ins*2.54)
-        return render_template('response.html', response = res)
+        ores = str(ins)
+        return render_template('response.html', their = request.args['inches'], response = res)
 @app.route("/responsetwo")
 def render_responsetwo():
         ins = float(request.args['inches'])
